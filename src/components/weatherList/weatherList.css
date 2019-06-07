@@ -1,0 +1,13 @@
+.country img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.weather_list{
+    margin: 20px;
+    padding: 10px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+}

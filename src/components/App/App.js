@@ -1,7 +1,7 @@
 import React from 'react';
 import MainLayout from "../../layouts/MainLayout";
 import {Switch, Route, Redirect} from "react-router-dom";
-import WeatherList from "../WeatherList/WeatherList";
+import WeatherList from "../weatherList/weatherList";
 import NotFound from "../NotFound/NotFound";
 
 function App() {

@@ -1,0 +1,22 @@
+.singleDayContainer{
+    width: 200px;
+    height: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 9px 15px 5px rgba(0,0,0,0.43);
+    background-color: #c8c8c8;
+}
+
+
+.icon{
+    height: 120px;
+    width: 120px;
+}
+
+.temp{
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+}
