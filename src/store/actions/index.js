@@ -10,11 +10,8 @@ export const fetchWeatherList = (url) => {
 
         try {
             const response = await axios.get(url);
-            // console.log(response.data.list);
-            const dataToDispatch = response.data.list.filter(item =>
-                item.dt_txt.split(' ').pop().split(':')[0] === '00');
 
-            dispatch(fetchWeatherListSuccess(dataToDispatch))
+            dispatch(fetchWeatherListSuccess(response.data.list));
         } catch (e) {
             dispatch(fetchWeatherListError(e))
         }
@@ -40,4 +37,22 @@ const fetchWeatherListError = (e) => {
         type: types.FETCH_WEATHER_LIST_ERROR,
         error: e
     }
+};
+
+
+export const selectDay = day => {
+
+    return {
+        type: types.DAY_SELECTED,
+        day
+    }
+};
+
+
+export const fetchCurrentWeather = (url) => async dispatch => {
+    const response = await axios.get(url);
+    dispatch({
+        type: types.FETCH_CURRENT_WEATHER,
+        response
+    })
 };

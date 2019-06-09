@@ -5,7 +5,6 @@ const initialState = {
     weatherList: null,
     loading: false,
     error: null,
-    selectedDay: null,
 };
 
 

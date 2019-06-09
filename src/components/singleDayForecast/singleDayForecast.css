@@ -7,6 +7,12 @@
     align-items: center;
     box-shadow: 0px 9px 15px 5px rgba(0,0,0,0.43);
     background-color: #c8c8c8;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+.singleDayContainer:hover{
+    cursor: pointer;
+    background-color: #dbdbdb;
 }
 
 
@@ -19,4 +25,12 @@
     width: 120px;
     display: flex;
     justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+
+a div{
+    color: black;
 }

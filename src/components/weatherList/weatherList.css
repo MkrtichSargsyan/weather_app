@@ -1,13 +1,101 @@
-.country img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.weather_body {
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
 }
 
-.weather_list{
-    margin: 20px;
+.country {
+    height: 250px;
+    position: relative;
+}
+
+.country img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -100;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.89);
+    opacity: 25%;
+    z-index: -90;
+}
+
+.country img .img-overlay {
+    width: 100%;
+}
+
+.weather_list {
+    flex-grow: 1;
     padding: 10px;
-    min-height: 100px;
+    background: url('../../images/sky.jpg') no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.current_day_weather_container{
+    margin: 50px 150px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 100px;
+    padding:0 50px;
+}
+
+.city_name{
+    font-size: 36px;
+    font-family: 'Dancing Script', serif;
+}
+
+.humid{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.curent_temp{
+    font-size: 40px;
+    color: #c8c8c8;
+}
+
+.clouds{
+    font-style: italic;
+    text-transform: capitalize;
+    color: #c8c8c8;
+    margin-bottom: 20px;
+}
+
+.devider{
+    border: 1px solid white;
+}
+
+.humid_items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c8c8c8;
+}
+
+.today_time{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

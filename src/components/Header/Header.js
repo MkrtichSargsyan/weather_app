@@ -5,12 +5,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 import {makeStyles} from '@material-ui/styles';
 import {Link} from "react-router-dom";
 import logo from '../../images/logo.png';
-import Typography from "@material-ui/core/Typography";
+
+import skyImage from '../../images/sky.jpg'
 
 const useStyles = makeStyles({
     root: {
         color: 'white',
-        backgroundColor: '#7497ff',
+        backgroundImage: `url(${skyImage})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+
     },
     img: {
         width: 40,
@@ -20,9 +24,17 @@ const useStyles = makeStyles({
         display: 'flex',
         width: 220,
         justifyContent: 'space-between',
-    },
+
+        '&:hover': {  transform: 'scale(1.1)'},
+
+},
+
+
     title: {
         fontFamily: 'Dancing Script',
+        color: 'white',
+        border: 'none'
+
     }
 });
 
@@ -33,14 +45,12 @@ const Header = () => {
     return (
         <AppBar position="static" className={classes.root}>
             <Toolbar>
-                <div className={classes.logo}>
-                    <Link to={'/'}>
+                <Link to={'/'} style={{textDecoration: 'none'}}>
+                    <div className={classes.logo}>
                         <img src={logo} alt="img" className={classes.img}/>
-                    </Link>
-                    <Typography variant="h4" className={classes.title}>
-                        Weather App
-                    </Typography>
-                </div>
+                        <h1 className={classes.title}>Weather App</h1>
+                    </div>
+                </Link>
             </Toolbar>
         </AppBar>
 
