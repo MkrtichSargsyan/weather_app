@@ -38,7 +38,8 @@
     background: url('../../images/sky.jpg') no-repeat;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
 }
 
